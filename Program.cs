@@ -1,4 +1,5 @@
 ﻿using Blog.Screens.TagScreens;
+using Blog.Screens.UserScreens;
 using Microsoft.Data.SqlClient;
 
 namespace Blog
@@ -37,7 +38,7 @@ namespace Blog
 
             switch (option)
             {
-                case 1: ListTagScreen.Load(); break;
+                case 1: MenuUserScreen.Load(); break;
                 case 2: CreateTagScreen.Load(); break;
                 case 3: UpdateTagScreen.Load(); break;
                 case 4: MenuTagScreen.Load(); break;
