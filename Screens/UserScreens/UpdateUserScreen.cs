@@ -37,11 +37,11 @@ namespace Blog.Screens.UserScreens
             {
                 var repository = new Repository<User>(Database.Connection);
                 repository.Update(user);
-                Console.WriteLine("Tag atualizada com Sucesso!");
+                Console.WriteLine("Usuário atualizado com Sucesso!");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Não foi possível atualizar a Tag.");
+                Console.WriteLine("Não foi possível atualizar o Usuário.");
                 Console.WriteLine(ex.Message);
             }
         }

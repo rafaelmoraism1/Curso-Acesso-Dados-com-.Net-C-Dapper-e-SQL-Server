@@ -39,7 +39,7 @@ namespace Blog.Screens.UserScreens
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Não foi possível criar a Tag.");
+                Console.WriteLine("Não foi possível cadastrar Usuário.");
                 Console.WriteLine(ex.Message);
             }
         }

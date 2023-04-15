@@ -8,7 +8,7 @@ namespace Blog.Screens.UserScreens
         public static void Load()
         {
             Console.Clear();
-            Console.WriteLine("Lista de Tags");
+            Console.WriteLine("Lista de Usuários");
             Console.WriteLine("----------------------------");
             List();
             Console.ReadKey();
