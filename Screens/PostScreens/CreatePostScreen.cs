@@ -25,7 +25,7 @@ namespace Blog.Screens.PostScreens
             Console.WriteLine("Slug: ");
             var slug = Console.ReadLine();
 
-            Update(new Post { Id = int.Parse(id), CategoryId = int.Parse(categoryId), AuthorId = int.Parse(authorId), Title = title, Summary = summary, Body = body, Slug = slug });
+            Create(new Post { Id = int.Parse(id), CategoryId = int.Parse(categoryId), AuthorId = int.Parse(authorId), Title = title, Summary = summary, Body = body, Slug = slug });
 
             Console.ReadKey();
             MenuPostScreen.Load();

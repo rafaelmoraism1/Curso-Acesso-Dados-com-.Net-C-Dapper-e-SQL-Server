@@ -21,7 +21,7 @@ namespace Blog.Screens.PostScreens
 
             var posts = repository.Get();
             foreach (var item in posts)
-                Console.WriteLine($"{item.Id} - {item.CategoryId} - {item.AuthorId} -({item.Title})");
+                Console.WriteLine($" - Id: {item.Id}\n - CategoriaId: {item.CategoryId}\n - AutorId: {item.AuthorId}\n - Título: {item.Title}\n - Data: {item.CreateData}");
         }
     }
 }
