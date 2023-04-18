@@ -1,9 +1,9 @@
-﻿using Blog.Screens.TagScreens;
-using Blog.Screens.CategoryScreens;
+﻿using Blog.Screens.CategoryScreens;
+using Blog.Screens.TagScreens;
 using Blog.Screens.UserScreens;
 using Blog.Screens.PostScreens;
-using Microsoft.Data.SqlClient;
 using Blog.Screens.RoleScreens;
+using Microsoft.Data.SqlClient;
 
 namespace Blog
 {
@@ -22,7 +22,7 @@ namespace Blog
             Console.ReadKey();
         }
 
-        private static void Load()
+        public static void Load()
         {
             Console.Clear();
             Console.WriteLine("Meu Blog");
@@ -30,13 +30,14 @@ namespace Blog
             Console.WriteLine("O que deseja fazer?");
             Console.WriteLine();
             Console.WriteLine("(1) Gestão de Usuário"); // User - ok
-            Console.WriteLine("(2) Gestão de Perfil"); // Role
+            Console.WriteLine("(2) Gestão de Perfil"); // Role - ok
             Console.WriteLine("(3) Gestão de Postagens"); // Post - ok
             Console.WriteLine("(4) Gestão de Categoria"); // Category - ok
             Console.WriteLine("(5) Gestão de Tag"); // Tag - ok
             Console.WriteLine("(6) Vincular Perfil/Usuário");
-            Console.WriteLine("(7) Vincular Postagem/Tag");
+            Console.WriteLine("(7) Vincular Tag/Postagem");
             Console.WriteLine("(8) Relatórios");
+            Console.WriteLine("(9) Encerrar Programa");
             Console.WriteLine();
             var option = short.Parse(Console.ReadLine()!);
 
@@ -50,6 +51,7 @@ namespace Blog
                 case 6: DeleteTagScreen.Load(); break;
                 case 7: DeleteTagScreen.Load(); break;
                 case 8: DeleteTagScreen.Load(); break;
+                case 9: System.Environment.Exit(0); break;
                 default: Load(); break;
             }
         }

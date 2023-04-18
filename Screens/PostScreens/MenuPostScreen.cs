@@ -13,6 +13,7 @@ namespace Blog.Screens.PostScreens
             Console.WriteLine("(2) Cadastrar uma Postagem");
             Console.WriteLine("(3) Atualizar uma Postagem");
             Console.WriteLine("(4) Excluir uma Postagem");
+            Console.WriteLine("(5) Retornar para Página Inicial");
             Console.WriteLine();
             var option = short.Parse(Console.ReadLine()!);
 
@@ -22,6 +23,7 @@ namespace Blog.Screens.PostScreens
                 case 2: CreatePostScreen.Load(); break;
                 case 3: UpdatePostScreen.Load(); break;
                 case 4: DeletePostScreen.Load(); break;
+                case 5: Program.Load(); break;
                 default: Load(); break;
             }
         }
