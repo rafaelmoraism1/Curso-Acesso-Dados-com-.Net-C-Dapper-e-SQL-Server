@@ -14,6 +14,6 @@ namespace Blog.Models
         public string? Slug { get; set; }
 
         [Write(false)]
-        public List<Role> Roles { get; set; }
+        public List<Role> Roles { get; set; } = new();
     }
 }
