@@ -3,7 +3,7 @@ using Blog.Screens.CategoryScreens;
 using Blog.Screens.UserScreens;
 using Blog.Screens.PostScreens;
 using Microsoft.Data.SqlClient;
-
+using Blog.Screens.RoleScreens;
 
 namespace Blog
 {
@@ -31,7 +31,7 @@ namespace Blog
             Console.WriteLine();
             Console.WriteLine("(1) Gestão de Usuário"); // User - ok
             Console.WriteLine("(2) Gestão de Perfil"); // Role
-            Console.WriteLine("(3) Gestão de Postagens"); // Post - 
+            Console.WriteLine("(3) Gestão de Postagens"); // Post - ok
             Console.WriteLine("(4) Gestão de Categoria"); // Category - ok
             Console.WriteLine("(5) Gestão de Tag"); // Tag - ok
             Console.WriteLine("(6) Vincular Perfil/Usuário");
@@ -43,8 +43,8 @@ namespace Blog
             switch (option)
             {
                 case 1: MenuUserScreen.Load(); break;
-                case 2: CreateTagScreen.Load(); break; //falta
-                case 3: MenuPostScreen.Load(); break; //
+                case 2: MenuRoleScreen.Load(); break; //falta
+                case 3: MenuPostScreen.Load(); break;
                 case 4: MenuCategoryScreen.Load(); break;
                 case 5: MenuTagScreen.Load(); break;
                 case 6: DeleteTagScreen.Load(); break;
