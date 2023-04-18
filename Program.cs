@@ -1,7 +1,9 @@
 ﻿using Blog.Screens.TagScreens;
 using Blog.Screens.CategoryScreens;
 using Blog.Screens.UserScreens;
+using Blog.Screens.PostScreens;
 using Microsoft.Data.SqlClient;
+
 
 namespace Blog
 {
@@ -27,25 +29,27 @@ namespace Blog
             Console.WriteLine("------------------");
             Console.WriteLine("O que deseja fazer?");
             Console.WriteLine();
-            Console.WriteLine("(1) Gestão de Usuário");
-            Console.WriteLine("(2) Gestão de Perfil");
-            Console.WriteLine("(3) Gestão de Categoria");
-            Console.WriteLine("(4) Gestão de Tag");
-            Console.WriteLine("(5) Vincular Perfol/Usuário");
-            Console.WriteLine("(6) Vincular Post/Tag");
-            Console.WriteLine("(7) Relatórios");
+            Console.WriteLine("(1) Gestão de Usuário"); // User - ok
+            Console.WriteLine("(2) Gestão de Perfil"); // Role
+            Console.WriteLine("(3) Gestão de Postagens"); // Post - 
+            Console.WriteLine("(4) Gestão de Categoria"); // Category - ok
+            Console.WriteLine("(5) Gestão de Tag"); // Tag - ok
+            Console.WriteLine("(6) Vincular Perfil/Usuário");
+            Console.WriteLine("(7) Vincular Postagem/Tag");
+            Console.WriteLine("(8) Relatórios");
             Console.WriteLine();
             var option = short.Parse(Console.ReadLine()!);
 
             switch (option)
             {
                 case 1: MenuUserScreen.Load(); break;
-                case 2: CreateTagScreen.Load(); break;
-                case 3: MenuCategoryScreen.Load(); break;
-                case 4: MenuTagScreen.Load(); break;
-                case 5: DeleteTagScreen.Load(); break;
+                case 2: CreateTagScreen.Load(); break; //falta
+                case 3: MenuPostScreen.Load(); break; //
+                case 4: MenuCategoryScreen.Load(); break;
+                case 5: MenuTagScreen.Load(); break;
                 case 6: DeleteTagScreen.Load(); break;
                 case 7: DeleteTagScreen.Load(); break;
+                case 8: DeleteTagScreen.Load(); break;
                 default: Load(); break;
             }
         }
